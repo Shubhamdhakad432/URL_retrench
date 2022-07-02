@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Kalam:wght@700&family=Nanum+Gothic&family=Nunito+Sans&family=Oooh+Baby&family=Permanent+Marker&family=Sarabun:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation */
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  background: center/cover no-repeat url("../static/login/shade_5.jpg");
+}
+
+.nav-first {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#navbar div ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.first {
+  width: 20%;
+  justify-content: left;
+}
+
+.second {
+  width: 80%;
+  justify-content: right;
+}
+
+.first a {
+  padding: 12px 30px;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Nav Section */
+
+.short{
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  background-color: white;
+  margin: 0px auto -100px auto;
+  font-size: 20px;
+  padding: 10px;
+  font-family: "Nanum Gothic", sans-serif;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: rgb(255, 255, 255) solid 2px;
+}
+
+
+.firstIN {
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 100px auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.site_url {
+  font-size: 20px;
+  font-family: "Sarabun", sans-serif;
+  border-radius: 5px;
+  border: white solid 2px;
+  padding: 10px 30px;
+  width: 40%;
+  height: 100%;
+}
+
+.result {
+  font-size: 20px;
+  font-family: "Sarabun", sans-serif;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  padding: 10px 40px;
+  margin-left: 30px;
+  color: white;
+  height: 100%;
+  border: rgb(0, 0, 0) solid 2px;
+}
+
+.secondOU {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 60px;
+}
+
+
+.footer{
+  height: 100px;
+}
