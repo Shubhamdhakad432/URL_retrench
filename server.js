@@ -18,7 +18,7 @@ app.set("views", path.join(__dirname, "views")); // set view directory
 
 app.get("/", async (req, res) => {
   const shortUrls = await ShortUrl.find();
-  res.render("index", { shortUrls: shortUrls });
+  res.render("index.ejs", { shortUrls: shortUrls });
 });
 
 app.post("/shortUrls", async (req, res) => {
