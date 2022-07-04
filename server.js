@@ -13,6 +13,7 @@ mongoose.connect("mongodb://localhost/urlShortener", {
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use("/static", express.static("static"));
+app.use("/models", express.static("models"));
 app.set("views", path.join(__dirname, "views")); // set view directory
 
 app.get("/", async (req, res) => {
