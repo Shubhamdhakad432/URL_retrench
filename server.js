@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const ShortUrl = require("./models/shortUrl");
 const app = express();
+const port = process.env.PORT || 5000;
 
 mongoose.connect("mongodb://localhost/urlShortener", {
   useNewUrlParser: true,
@@ -11,6 +12,7 @@ mongoose.connect("mongodb://localhost/urlShortener", {
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use("/static", express.static("static"));
+app.set("views", path.join(__dirname, "views")); // set view directory
 
 app.get("/", async (req, res) => {
   const shortUrls = await ShortUrl.find();
@@ -30,4 +32,6 @@ app.get("/:shortUrl", async (req, res) => {
   res.redirect(shortUrl.full);
 });
 
-app.listen(process.env.PORT || 5000);
+app.listen(port, () => {
+  console.log(`this is started in successful run on ${port}`);
+});
