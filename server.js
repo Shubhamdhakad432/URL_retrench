@@ -14,6 +14,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use("/static", express.static("static"));
 app.use("/models", express.static("models"));
+app.use("/views", express.static("views"));
 app.set("views", path.join(__dirname, "views")); // set view directory
 
 app.get("/", async (req, res) => {
