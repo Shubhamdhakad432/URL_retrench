@@ -16,7 +16,12 @@ app.use("/static", express.static("static"));
 app.use("/models", express.static("models"));
 app.set("views", path.join(__dirname, "views")); // set view directory
 
-app.get("/*", async (req, res) => {
+app.get("/", async (req, res) => {
+  const shortUrls = await ShortUrl.find();
+  res.render("index.ejs", { shortUrls: shortUrls });
+});
+
+app.get("/views/index.ejs", async (req, res) => {
   const shortUrls = await ShortUrl.find();
   res.render("index.ejs", { shortUrls: shortUrls });
 });
